@@ -27,18 +27,18 @@ namespace parameters {
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 3914525;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW         = 40;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 27586;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000000);
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                 = 187000;
-const size_t ZAWY_DIFFICULTY_V2                          = 0;
-const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION   = 3;
-const unsigned EMISSION_SPEED_FACTOR                         = 25;
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(26000000000);
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0;
+const size_t ZAWY_DIFFICULTY_V2                              = 0;
+const uint8_t ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION       = 3;
+const unsigned EMISSION_SPEED_FACTOR                         = 20;
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -52,11 +52,11 @@ const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 const uint64_t MINIMUM_FEE                                   = UINT64_C(10);
 const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(10);
 
-const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 45; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
-const size_t   DIFFICULTY_WINDOW                                = 17;
-const size_t   DIFFICULTY_WINDOW_V1                          = 2880;
-const size_t   DIFFICULTY_WINDOW_V2                          = 2880;
+const size_t   DIFFICULTY_WINDOW                             = 17;
+const size_t   DIFFICULTY_WINDOW_V1                          = 1920;
+const size_t   DIFFICULTY_WINDOW_V2                          = 1920;
 const size_t   DIFFICULTY_CUT                                = 0;  // timestamps to cut after sorting
 const size_t   DIFFICULTY_CUT_V1                             = 60;
 const size_t   DIFFICULTY_CUT_V2                             = 60;
@@ -81,8 +81,8 @@ const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
 const uint32_t KEY_IMAGE_CHECKING_BLOCK_INDEX                = 0;
-const uint32_t UPGRADE_HEIGHT_V2                                = 1;
-const uint32_t UPGRADE_HEIGHT_V3                                = 2;
+const uint32_t UPGRADE_HEIGHT_V2                             = 1;
+const uint32_t UPGRADE_HEIGHT_V3                             = 2;
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
 const uint32_t UPGRADE_VOTING_WINDOW                         = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
 const uint32_t UPGRADE_WINDOW                                = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
@@ -96,7 +96,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "TurtleCoin";
+const char     CRYPTONOTE_NAME[]                             = "ZomboCoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -111,8 +111,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  11897;
-const int      RPC_DEFAULT_PORT                              =  11898;
+const int      P2P_DEFAULT_PORT                              =  12524;
+const int      RPC_DEFAULT_PORT                              =  12526;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -129,7 +129,7 @@ const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; //
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
-const char* const SEED_NODES[] = { "104.236.227.176:11897", "104.236.55.84:11897", "163.172.147.52:11897", "51.15.138.214:11897", "51.15.137.77:11897" };
+const char* const SEED_NODES[] = { "xxx:12524", "xxx:12524" };
 
 
 struct CheckpointData {
